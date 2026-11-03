@@ -1,0 +1,120 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+  width: min(480px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem;
+  font: 16px/1.45 system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink, #1f2937);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0 0 1.25rem;
+  color: var(--muted, #4b5563);
+  font-size: 0.95rem;
+}
+
+.panel {
+  border: 1px solid var(--panel-edge, #e5e7eb);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: var(--panel, #fff);
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.empty {
+  margin: 0 0 1rem;
+  color: var(--muted-soft, #6b7280);
+  font-size: 0.9rem;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.375rem;
+  background: var(--row, #f3f4f6);
+}
+
+li.done .title {
+  text-decoration: line-through;
+  color: var(--muted-soft, #6b7280);
+}
+
+input[type='checkbox'] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent, #2563eb);
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.add-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type='text'] {
+  font: inherit;
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--control-edge, #d1d5db);
+  border-radius: 0.375rem;
+  background: var(--control-bg, #fff);
+  color: inherit;
+}
+
+input[type='text']:focus-visible {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 1px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--accent, #2563eb);
+  border-radius: 0.375rem;
+  background: var(--accent, #2563eb);
+  color: var(--on-accent, #fff);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: var(--accent-hover, #1d4ed8);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent, #2563eb);
+  outline-offset: 2px;
+}

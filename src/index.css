@@ -1,0 +1,144 @@
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --muted-soft: #6b7280;
+  --panel: #ffffff;
+  --panel-edge: #e5e7eb;
+  --row: #f3f4f6;
+  --control-bg: #ffffff;
+  --control-edge: #d1d5db;
+  --control-fill: #f9fafb;
+  --control-fill-hover: #f3f4f6;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --on-accent: #ffffff;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #16171d;
+  --ink: #e5e7eb;
+  --muted: #9ca3af;
+  --muted-soft: #9ca3af;
+  --panel: #111827;
+  --panel-edge: #374151;
+  --row: #1f2937;
+  --control-bg: #0b1220;
+  --control-edge: #374151;
+  --control-fill: #1f2937;
+  --control-fill-hover: #111827;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --on-accent: #ffffff;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  font: 16px/1.45 system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.site-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--panel-edge);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.site-bar:not(:has(.site-nav)) {
+  justify-content: flex-end;
+}
+
+.site-nav {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.site-nav:hover {
+  color: var(--ink);
+}
+
+.site-nav:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hub,
+.demo-stage {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.hub h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hub .lede {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.demo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.demo-list a {
+  display: block;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--panel-edge);
+  border-radius: 0.5rem;
+  background: var(--panel);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.demo-list a:hover {
+  border-color: var(--accent);
+}
+
+.demo-list a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.demo-list .desc {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
